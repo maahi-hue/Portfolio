@@ -5,6 +5,8 @@ This project showcases my work, skills, and experience in an interactive and vis
 
 ---
 
+## 🚀 Live Link: (http://127.0.0.1:5502)
+
 ## 🚀 Features
 
 - **Modern Design**: A sleek and responsive UI to provide a seamless browsing experience.
