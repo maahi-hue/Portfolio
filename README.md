@@ -5,7 +5,7 @@ This project showcases my work, skills, and experience in an interactive and vis
 
 ---
 
-## 🚀 Live Link: (http://127.0.0.1:5502)
+## 🚀 Live Link: (https://magenta-scone-c412d3.netlify.app/)
 
 ## 🚀 Features
 
