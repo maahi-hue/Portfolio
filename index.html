@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-----FONT AWESOME------>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!------CSS------>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <link rel="stylesheet" href="assets/CSS/style.css" />
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("nav-toggle");
+      const menu = document.getElementById("nav-menu");
+
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("show");
+      });
+    });
+
+
+  </script>
+
+  <title>Portfolio Website</title>
+</head>
+
+<body>
+  <!----HEADER--->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo"> <img class="logo" src="assets/img/logo.png" /></a>
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <ul class="nav__list" id="nav-menu">
+        <li class="nav__item">
+          <a href="#home" class="nav__link active-link">Home</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#about" class="nav__link">About</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#qualification" class="nav__link">Experiance</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#services" class="nav__link">Services</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#works" class="nav__link">Portfolio</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#contact" class="nav__link">Contact</a>
+        </li>
+      </ul>
+      <button class="btn1" id="downloadResume">Download Resume</button>
+      <script>
+        const resumeFile = "/Nafisa_Kamal.CV.pdf";
+
+
+        const handleDownloadAndOpen = () => {
+
+          const downloadLink = document.createElement("a");
+          downloadLink.href = resumeFile;
+          downloadLink.download = "Nafisa_Kamal.CV.pdf";
+          document.body.appendChild(downloadLink);
+          downloadLink.click();
+          document.body.removeChild(downloadLink);
+
+          // Open the file in a new tab
+          const openLink = document.createElement("a");
+          openLink.href = resumeFile;
+          openLink.target = "_blank";
+          document.body.appendChild(openLink);
+          openLink.click();
+          document.body.removeChild(openLink);
+        };
+
+
+        document
+          .getElementById("downloadResume")
+          .addEventListener("click", handleDownloadAndOpen);</script>
+    </nav>
+  </header>
+
+  <!----MAIN--->
+  <main class="main">
+    <!----HOME--->
+    <section class="home" id="home">
+      <div class="home__container container grid">
+        <div class="home__content">
+          <span class="home__small">Hello</span>
+          <h1 class="home__title">
+            <span>I'm</span> NAFISA <br />
+            a <span>web developer</span>
+          </h1>
+
+          <p class="home__description">
+            Experienced web developer with a passion for crafting elegant and
+            efficient digital solutions. Proficient in HTML, CSS, JavaScript,React,NodeJs
+            and various web development frameworks. Dedicated to creating
+            user-friendly interfaces and optimizing website performance.
+            Strong problem-solving skills and a commitment to staying updated
+            with the latest technologies and trends in the field.
+          </p>
+
+          <div class="home__btns">
+            <a href="#contact" class="btn">Hire Me!</a>
+            <a href="#works" class="btn btn--transparent">Portfolio</a>
+          </div>
+        </div>
+
+        <div class="home__img-wrapper">
+          <img src="assets/img/home.jpg" alt="profile" class="home__img" />
+        </div>
+      </div>
+    </section>
+
+    <!----ABOUT--->
+    <section class="about section" id="about">
+      <div class="about__container container grid">
+        <div class="about__img-wrapper">
+          <img src="assets/img/about.jpg" alt="" class="about__img" />
+          <img src="assets/img/about.jpg" alt="" class="about__img" />
+          <img src="assets/img/about.jpg" alt="" class="about__img" />
+          <img src="assets/img/about.jpg" alt="" class="about__img" />
+        </div>
+
+        <div class="about__content">
+          <h2 class="about__section" data-title="Who am I?">
+            I'm Nafisa Kamal,
+          </h2>
+          <h2 class="about__section">a <span class="auto-type"></span></h2>
+
+          <p class="about__description">
+            A web developer is a professional who specializes in designing,
+            creating, and maintaining websites. They possess skills in
+            programming languages such as HTML, CSS, and JavaScript, as well
+            as frameworks like React, Angular, or Vue.js. Their
+            responsibilities often include building user-friendly interfaces,
+            ensuring websites are mobile-responsive, optimizing site
+            performance, and troubleshooting technical issues. Web developers
+            collaborate with designers, content creators, and other
+            stakeholders to bring digital projects to life.
+          </p>
+
+          <ul class="about__data grid">
+            <li class="data__item">
+              <h3 class="data__title">Name:</h3>
+              <span class="data__description">Nafisa Kamal</span>
+            </li>
+
+            <li class="data__item">
+              <h3 class="data__title">Age:</h3>
+              <span class="data__description">22 Years</span>
+            </li>
+
+            <li class="data__item">
+              <h3 class="data__title">From:</h3>
+              <span class="data__description">Chittagong, Bangladesh</span>
+            </li>
+
+            <li class="data__item">
+              <h3 class="data__title">Email:</h3>
+              <span class="data__description about__link">nafisakamal180@gmail.com</span>
+            </li>
+          </ul>
+
+          <div class="about__bottom">
+            <a href="Nafisa Kamal.CV.pdf" download class="btn">Download Resume</a>
+
+            <div class="about__social-links">
+              <a href="https://github.com/maahi-hue" target="_blank" rel="noopener noreferrer"
+                class="about__social-links">
+                <i class="fa-brands fa-github"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/in/nafisa-kamal-19381122b" target="_blank" rel="noopener noreferrer"
+                class="about__social-links">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----QUALIFICATION--->
+    <section class="qualification section " id="qualification">
+      <h2 class="section__title title-center" data-title="My Journey">
+        Qualification
+      </h2>
+      <div class="container grid">
+        <div class="resume__group">
+          <h3 class="resume__heading">Education</h3>
+
+          <div class="resume__items">
+
+            <div class="resume__item">
+              <div class="resume__header">
+                <h3 class="resume__subtitle">
+                  International Islamic University, Chittagong
+                </h3>
+              </div>
+
+              <div class="resume__content">
+                <div class="resume__date-title">
+                  <h3 class="resume__title">
+                    Faculty of Science and Engineering
+                  </h3>
+                  <span class="resume__date">2022 - 2025</span>
+                </div>
+
+                <p class="resume__description">
+                  Doing bechelor's degree in CSC.
+                </p>
+              </div>
+            </div>
+            <div class="resume__item">
+              <div class="resume__header">
+                <h3 class="resume__subtitle">
+                  Kapasgola City Corporation Mohila College, Chittagong
+                </h3>
+              </div>
+
+              <div class="resume__content">
+                <div class="resume__date-title">
+                  <h3 class="resume__title">
+                    Group - Science
+                  </h3>
+                  <span class="resume__date">2018 - 2020</span>
+                </div>
+
+                <p class="resume__description">
+                  I completed my HSC from here.
+                </p>
+              </div>
+            </div>
+
+            <div class="resume__item">
+              <div class="resume__header">
+                <h3 class="resume__subtitle">School</h3>
+              </div>
+
+              <div class="resume__content">
+                <div class="resume__date-title">
+                  <h3 class="resume__title">
+                    Bangladesh Mahila Samiti Girls' High School and College, Chittagong
+                  </h3>
+                  <span class="resume__date">2012 - 2018</span>
+                </div>
+
+                <p class="resume__description">
+                  I completed my SSC from BMS.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----SKILLS--->
+    <section class="skills section">
+      <h2 class="section__title title-center" data-title="My Talent">
+        Professional Skills
+      </h2>
+
+      <div class="skills__container container grid">
+
+        <div class="skills__item">
+          <div class="skills__titles">
+            <h3 class="skills__name">C++</h3>
+            <span class="skills__no">40 %</span>
+          </div>
+
+          <p class="skills__description">
+            C++ is a powerful, high-level programming language widely used for
+            system software, game development, and applications requiring high
+            performance.
+          </p>
+
+          <div class="skills__bar">
+            <div class="skills__percentage" style="width: 40%">
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <div class="skills__item">
+          <div class="skills__titles">
+            <h3 class="skills__name">HTML</h3>
+            <span class="skills__no">70 %</span>
+          </div>
+
+          <p class="skills__description">
+            HTML (HyperText Markup Language) is the standard language used to structure and display content on web
+            pages.
+          </p>
+
+          <div class="skills__bar">
+            <div class="skills__percentage" style="width: 70%">
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <div class="skills__item">
+          <div class="skills__titles">
+            <h3 class="skills__name">CSS</h3>
+            <span class="skills__no">70 %</span>
+          </div>
+
+          <p class="skills__description">
+            CSS (Cascading Style Sheets) is a stylesheet language used to style and layout HTML elements, including
+            design, colors, fonts, and responsive positioning.
+          </p>
+
+          <div class="skills__bar">
+            <div class="skills__percentage" style="width: 70%">
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills__item">
+          <div class="skills__titles">
+            <h3 class="skills__name">JavaScript</h3>
+            <span class="skills__no">50 %</span>
+          </div>
+
+          <p class="skills__description">
+            JavaScript is a versatile programming language commonly used for
+            web development. It enables interactive and dynamic content on
+            websites, enhancing user experience by allowing for actions.
+          </p>
+
+          <div class="skills__bar">
+            <div class="skills__percentage" style="width: 50%">
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills__item">
+          <div class="skills__titles">
+            <h3 class="skills__name">React</h3>
+            <span class="skills__no">70 %</span>
+          </div>
+
+          <p class="skills__description">
+            React is a JavaScript library for building user interfaces, focusing on component-based architecture and
+            efficient rendering with a virtual DOM.
+          </p>
+
+          <div class="skills__bar">
+            <div class="skills__percentage" style="width: 70%">
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills__item">
+          <div class="skills__titles">
+            <h3 class="skills__name">Python</h3>
+            <span class="skills__no">30 %</span>
+          </div>
+
+          <p class="skills__description">
+            Python is a high-level programming language known for its
+            simplicity and readability.Developed in the late 1980s by Guido
+            van Rossum, Python emphasizes code readability and simplicity.
+          </p>
+
+          <div class="skills__bar">
+            <div class="skills__percentage" style="width: 30%">
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----PORTFOLIO--->
+    <section class="works section" id="works">
+      <h2 class="section__title title-center" data-title="My Portfolio">Recent Works</h2>
+
+      <div class="work__container container grid">
+        <!-- Work Card 1 -->
+        <div class="work__card">
+          <div class="conteudo">
+            <div class="carrousel">
+              <article class="card">
+                <img src="assets/img/img-1.png" />
+              </article>
+            </div>
+          </div>
+          <div class="work__details">
+            <h3 class="work__title">BistroBoard</h3>
+            <div class="work__buttons">
+              <a href="https://assignment-11-f04f9.web.app" target="_blank">
+                <button class="btn">Live Link</button>
+              </a>
+              <a href="details1.html" target="_blank">
+                <button class="btn">Details</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Work Card 2 -->
+        <div class="work__card">
+          <div class="conteudo">
+            <div class="carrousel">
+              <article class="card">
+                <img src="assets/img/img-2.png" />
+              </article>
+
+            </div>
+          </div>
+          <div class="work__details">
+            <h3 class="work__title">EquiSports</h3>
+            <div class="work__buttons">
+              <a href="https://assignment-10-49f6b.web.app" target="_blank">
+                <button class="btn">Live Link</button>
+              </a>
+              <a href="details2.html" target="_blank">
+                <button class="btn">Details</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="work__card">
+          <div class="conteudo">
+            <div class="carrousel">
+              <article class="card">
+                <img src="assets/img/img-3.png" />
+              </article>
+
+            </div>
+          </div>
+          <div class="work__details">
+            <h3 class="work__title">Career Navigator</h3>
+            <div class="work__buttons">
+              <a href="https://assignment-9-e8f79.web.app" target="_blank">
+                <button class="btn">Live Link</button>
+              </a>
+              <a href="details3.html" target="_blank">
+                <button class="btn">Details</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!----CONTACT--->
+    <section class="contact section" id="contact">
+      <h2 class="section__title title-center" data-title="Get in touch">
+        Contact Me
+      </h2>
+
+      <div class="contact__container container grid">
+        <div class="contact__details">
+          <div class="contact__item">
+            <i class="fa-solid fa-phone contact__icon"></i>
+
+            <div>
+              <h3 class="contact__title">Call Us</h3>
+              <span class="contact__data">+8801845335595</span>
+            </div>
+          </div>
+
+          <div class="contact__item">
+            <i class="fa-solid fa-envelope contact__icon"></i>
+
+            <div>
+              <h3 class="contact__title">Email Us</h3>
+              <span class="contact__data">nafisakamal180@gmail.com</span>
+            </div>
+          </div>
+
+          <div class="contact__item">
+            <i class="fa-solid fa-location-dot contact__icon"></i>
+
+            <div>
+              <h3 class="contact__title">Address</h3>
+              <span class="contact__data">Chittagong,Bangladesh</span>
+            </div>
+          </div>
+
+          <div id="map" style="height: 400px"></div>
+        </div>
+
+        <div class="container">
+          <form class="contact__form" target="_blank" action="https://formsubmit.co/nafisakamal180@gmail.com"
+            method="POST">
+            <div class="form__group">
+
+              <div class="form__input">
+                <input type="text" name="name" class="input__control" placeholder="Full Name" required>
+              </div>
+              <div class="form__input">
+                <input type="email" name="email" class="input__control" placeholder="Email Address" required>
+              </div>
+
+            </div>
+            <div>
+              <textarea placeholder="Your Message" class="input__control textarea" name="message" rows="10" cols="30"
+                required></textarea>
+            </div>
+            <button type="submit" class="btn contact__btn">Send Email</button>
+          </form>
+        </div>
+
+        <div class="popup" id="popup">Message sent successfully!</div>
+      </div>
+    </section>
+  </main>
+
+  <!----FOOTER--->
+  <footer class="footer">
+    <div class="footer__container container">
+      <p class="footer__copyright">
+        &copy; 2024 Nafisa Kamal. All Rights Reserved
+      </p>
+    </div>
+  </footer>
+
+  <!----js files-->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="assets/script.js"></script>
+
+</body>
+
+</html>

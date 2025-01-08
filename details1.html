@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Navbar with Back Button -->
+    <nav class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="nav__logo"> <img class="rounded-full h-14" src="assets/img/logo.png" /></a>
+            <a href="index.html" class="bg-blue-500 px-4 py-2 rounded-md hover:bg-blue-700">Back</a>
+        </div>
+    </nav>
+
+    <!-- Project Details Section -->
+    <section class="py-8">
+        <div class="container mx-auto px-4">
+            <!-- Project Title -->
+            <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">BistroBoard Project</h1>
+
+            <!-- Project Images and Description -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Images -->
+                <div class="space-y-4">
+                    <img src="assets/img/1.png" alt="Project Image 1" class="w-full rounded-lg shadow-lg">
+                    <img src="assets/img/2.png" alt="Project Image 2" class="w-full rounded-lg shadow-lg">
+                    <img src="assets/img/3.png" alt="Project Image 2" class="w-full rounded-lg shadow-lg">
+                </div>
+
+                <!-- Project Description -->
+                <div class="space-y-4">
+                    <h2 class="text-2xl font-semibold text-gray-700">Project Overview</h2>
+                    <p class="text-gray-600">The purpose of this project is to create a functional and visually
+                        appealing restaurant management website. It allows users to browse food items, place orders, and
+                        manage their purchases. The project demonstrates CRUD operations, dynamic rendering of data, and
+                        interactive UI/UX elements.</p>
+
+                    <h2 class="text-2xl font-semibold text-gray-700">Features</h2>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Order Management: Users can view their orders, delete them, and update purchase counts
+                            dynamically.</li>
+                        <li>Dynamic Data Handling: Fetches and displays data from MongoDB using REST APIs.</li>
+                        <li>Interactive Design: User-friendly navigation and responsive design for seamless experience
+                            on all devices.</li>
+                        <li>Secure Operations: Protect sensitive routes and ensure secure data handling using
+                            environment variables.</li>
+                        <li>Gallery Page: A visually stunning gallery showcasing high-quality images with a lightbox
+                            feature.</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-semibold text-gray-700">Packages Used</h2>
+                    <p class="text-gray-600">axios: For making HTTP requests.<br>
+                        moment: To format dates and times.<br>
+                        sweetalert2: For beautiful and customizable alert messages.<br>
+                        react-icons: To include icons in the UI.<br>
+                        yet-another-react-lightbox: For the interactive lightbox feature on the Gallery Page.<br>
+                        dotenv: To manage environment variables securely.</p>
+
+                    <a href="https://assignment-11-f04f9.web.app" target="_blank"
+                        class="bg-blue-500 text-white px-6 py-3 rounded-md inline-block mt-4 hover:bg-blue-700">
+                        View Live Demo
+                    </a>
+                    <a href="https://github.com/programming-hero-web-course2/b10a11-client-side-maahi-hue"
+                        target="_blank"
+                        class="bg-blue-500 text-white px-6 py-3 rounded-md inline-block mt-4 hover:bg-blue-700">
+                        Client Side GitHub Repository Link
+                    </a>
+                    <a href="https://github.com/programming-hero-web-course2/b10a11-server-side-maahi-hue"
+                        target="_blank"
+                        class="bg-blue-500 text-white px-6 py-3 rounded-md inline-block mt-4 hover:bg-blue-700">
+                        Server Side GitHub Repository Link
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
