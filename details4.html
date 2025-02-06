@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareMeds Project Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Navbar with Back Button -->
+    <nav class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="nav__logo"> <img class="rounded-full h-14" src="assets/img/logo.png"
+                    alt="CareMeds Logo" /></a>
+            <a href="index.html" class="bg-blue-500 px-4 py-2 rounded-md hover:bg-blue-700">Back</a>
+        </div>
+    </nav>
+
+    <!-- Project Details Section -->
+    <section class="py-8">
+        <div class="container mx-auto px-4">
+            <!-- Project Title -->
+            <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">CareMeds Project</h1>
+
+            <!-- Project Images and Description -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Images -->
+                <div class="space-y-4">
+                    <img src="assets/img/1.1.1.1.png" alt="CareMeds Project Screenshot 1"
+                        class="w-full rounded-lg shadow-lg">
+                    <img src="assets/img/2.2.2.2.png" alt="CareMeds Project Screenshot 2"
+                        class="w-full rounded-lg shadow-lg">
+                    <img src="assets/img/3.3.3.3.png" alt="CareMeds Project Screenshot 3"
+                        class="w-full rounded-lg shadow-lg">
+                    <img src="assets/img/4.4.4.4.png" alt="CareMeds Project Screenshot 3"
+                        class="w-full rounded-lg shadow-lg">
+                    <img src="assets/img/5.5.5.5.png" alt="CareMeds Project Screenshot 3"
+                        class="w-full rounded-lg shadow-lg">
+                </div>
+
+                <!-- Project Description -->
+                <div class="space-y-4">
+                    <h2 class="text-2xl font-semibold text-gray-700">Project Overview</h2>
+                    <p class="text-gray-600">CareMeds is a multi-vendor e-commerce platform that specializes in selling
+                        medicines and healthcare products. Users can seamlessly purchase medicines, submit queries, and
+                        get expert advice. This project demonstrates user and seller management, dynamic data rendering,
+                        secure payment processing, and role-based authentication.</p>
+
+                    <h2 class="text-2xl font-semibold text-gray-700">Features</h2>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Interactive homepage with categories and product sliders.</li>
+                        <li>User authentication with email/password, Google, and GitHub login.</li>
+                        <li>Shop page with filters and sorting for medicines.</li>
+                        <li>Secure payment integration using Stripe and invoice generation.</li>
+                        <li>Admin dashboard for managing users, products, and payments.</li>
+                        <li>Seller dashboard for managing product listings and viewing payment history.</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-semibold text-gray-700">Technologies Used</h2>
+                    <p class="text-gray-600">
+                        Frontend: React, Tailwind CSS<br>
+                        Backend: Node.js, Express.js<br>
+                        Database: MongoDB<br>
+                        Authentication: Firebase, JWT<br>
+                        Payment: Stripe<br>
+                        Hosting & Deployment: Vercel, GitHub
+                    </p>
+
+                    <h2 class="text-2xl font-semibold text-gray-700">Packages Used</h2>
+                    <p class="text-gray-600">
+                        axios: For making HTTP requests.<br>
+                        react-query: For managing API state.<br>
+                        sweetalert2: For custom alert messages.<br>
+                        react-icons: For including icons in the UI.<br>
+                        stripe: For secure payment processing.<br>
+                        dotenv: For managing environment variables securely.
+                    </p>
+
+                    <a href="https://assignment-12-6a5e8.web.app" target="_blank"
+                        class="bg-blue-500 text-white px-6 py-3 rounded-md inline-block mt-4 hover:bg-blue-700">
+                        View Live Demo
+                    </a>
+                    <a href="https://github.com/maahi-hue/CareMeds" target="_blank"
+                        class="bg-blue-500 text-white px-6 py-3 rounded-md inline-block mt-4 hover:bg-blue-700">
+                        Client Side GitHub Repository Link
+                    </a>
+                    <a href="https://github.com/maahi-hue/CareMeds-server" target="_blank"
+                        class="bg-blue-500 text-white px-6 py-3 rounded-md inline-block mt-4 hover:bg-blue-700">
+                        Server Side GitHub Repository Link
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
